@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/leonardo-ui/dist/leonardo-ui.css" type="text/css"/>
+    <title>Data Dashboard</title>
+</head>
+<body>
+    
+    <div class="page-container">
+      <button class="display-charts-btn btn lui-button  lui-button--info" data-target="bar-chart">View bar chart</button>
+      <button class="display-charts-btn btn lui-button  lui-button--info" data-target="pie-chart">View pie chart</button>
+      
+      <div class="dropdown-container"> 
+        <select class="lui-select barchart-dropdown-group" id="barchart-ifas">
+            <option value="1" selected>Select IFA for bar chart</option>
+          </select>
+
+          <select class="lui-select barchart-dropdown-group" id="barchart-funds">
+            <option value="1" selected>Select Fund for bar chart</option>
+          </select>
+
+
+          <select class="lui-select piechart-dropdown-group" id="piechart-years">
+            <option value="1" selected>Select Year for pie chart</option>
+          </select>
+
+          <select class="lui-select piechart-dropdown-group" id="piechart-funds">
+            <option value="1" selected>Select Fund for pie chart</option>
+          </select>
+        </div>
+          
+        <div class="chart-container" id="bar-chart"></div>
+        <div class="chart-container" id="pie-chart"></div>
+      </div>
+    <script src="node_modules/leonardo-ui/dist/leonardo-ui.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/picasso.js" crossorigin></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  
+</body>
+</html>
